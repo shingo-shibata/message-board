@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  def index＠
+  def index
     @message = Message.new
     @messages = Message.all
   end
@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     @message.save
-    ridirect_to root_path , notice: "メッセージを保存しました"
+    redirect_to root_path , notice: "メッセージを保存しました"
   end
   
   private
